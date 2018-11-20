@@ -1,0 +1,75 @@
+$padding-md:1rem;
+$border-color:#f3f3f3;
+$text-color:#666666;
+$rating-color:#5e5151;
+$rating-empty-color:#848484;
+.container {
+  margin-top: $padding-md*2;
+  margin-bottom: $padding-md*2;
+  .single-item{
+    border: 0;
+  }
+  .card {
+    padding: 2rem;
+    border: 0;
+    &:hover {
+      border: 1px solid $border-color;
+    }
+    .price {
+      color: #83122a;
+      font-weight: 700;
+      font-size: .80rem;
+    }
+    .base-price {
+      font-size: .75rem;
+      color: #000;
+    }
+    .type {
+      color: $text-color;
+      margin-bottom: 7px;
+      font-size: 0.8rem;
+    }
+
+    .ratings {
+      position: relative;
+      vertical-align: middle;
+      display: inline-block;
+      color: #b1b1b1;
+      overflow: hidden;
+    }
+
+    .full-stars{
+      position: absolute;
+      left: 0;
+      top: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      color: $rating-color;
+
+      &:before {
+        content: "\2605\2605\2605\2605\2605";
+        font-size: 14pt;
+        -webkit-text-stroke: 1px black;
+      }
+    }
+
+    .empty-stars {
+      &:before {
+        content: "\2605\2605\2605\2605\2605";
+        font-size: 14pt;
+        -webkit-text-stroke: 1px $rating-empty-color;
+      }
+    }
+  }
+  .sortBy {
+    padding: 1rem;
+    width: 10rem;
+    select {
+      width: 10rem;
+      border: 1px solid black;
+    }
+  }
+  .btn {
+    margin-top: 1rem;
+  }
+}
